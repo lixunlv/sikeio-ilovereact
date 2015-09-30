@@ -19,33 +19,40 @@
 </head>
 <body>
 <div class="section section_1" id="native">
-    <img class="react-logo" src="img/react-logo.svg"/>
+    <div class="overlay"></div>
+    <div class="intro">
+        <img class="react-logo" src="img/react-logo.svg"/>
 
-    <h1>Build Native Apps With React</h1>
+        <h1>Build Native Apps With React</h1>
 
-    <div class="links">
-        <a href="#native">
-            Native iOS
-        </a>
+        <div class="links">
+            <a href="#native">
+                Native iOS
+            </a>
 
-        <a href="#touch">
-            Touch Handling
-        </a>
+            <a href="#touch">
+                Touch Handling
+            </a>
 
-        <a href="#async">
-            Asynchronous
-        </a>
+            <a href="#async">
+                Asynchronous
+            </a>
 
-        <a href="#flex">
-            Flex &amp; Styling
-        </a>
+            <a href="#flex">
+                Flex &amp; Styling
+            </a>
+        </div>
     </div>
 </div>
 
 <div class="section section_2" id="touch">
     <div class="iphone-demo">
-        <img src="img/iphone-frame.svg"/>
+        <div class="iphone-image">
+            <img src="img/iphone-frame.svg"/>
+            <img src="img/tumblr-demo.jpg" class="tumblr"/>
+        </div>
     </div>
+
 
     <div class="feature-description">
         <h2>Native Experience</h2>
@@ -58,7 +65,10 @@
 
 <div class="section section_3" id="async">
     <div class="iphone-demo">
-        <img src="img/iphone-frame.svg"/>
+        <div class="iphone-image">
+            <img src="img/iphone-frame.svg"/>
+            <img src="img/swype-demo.jpg" class="tumblr"/>
+        </div>
     </div>
 
     <div class="feature-description">
@@ -73,6 +83,25 @@
 
 <div class="section section_4" id="flex">
     <h1>Android Is Here</h1>
+    <img id="android-robot" src="img/android-robot.svg"/>
+</div>
+
+<div id="slider-control">
+    <a href="#native" class="active">
+        <div class="dot"></div>
+    </a>
+
+    <a href="#touch">
+        <div class="dot"></div>
+    </a>
+
+    <a href="#async">
+        <div class="dot"></div>
+    </a>
+
+    <a href="#flex">
+        <div class="dot"></div>
+    </a>
 </div>
 
 </body>
