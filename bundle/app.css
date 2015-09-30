@@ -623,9 +623,9 @@ a:hover {
     position: absolute;
     right: 0;
     bottom: 0;
-    -webkit-transform: translate(50%, 50%) rotate(-45deg);
-        -ms-transform: translate(50%, 50%) rotate(-45deg);
-            transform: translate(50%, 50%) rotate(-45deg);
+    -webkit-transform: translate(100px, 120px) rotate(-45deg);
+        -ms-transform: translate(100px, 120px) rotate(-45deg);
+            transform: translate(100px, 120px) rotate(-45deg);
 }
 
 #slider-control {
@@ -653,3 +653,6 @@ a:hover {
     background-color: #fff;
 }
 
+.react-logo {
+    position: relative;
+}
