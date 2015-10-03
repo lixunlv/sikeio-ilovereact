@@ -423,19 +423,18 @@ th {
   padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #1F1E34;
     color: #FFF;
-    font-family: "Avenir Next",
-    "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+    font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
     Arial, "Lucida Grande", sans-serif;
     font-weight: 100;
     height: 100%;
     width: 100%;
-}
-
-html {
-    height: 100%;
 }
 
 body, div, span {
@@ -497,18 +496,37 @@ a:hover {
 
 .section {
     height: 100%;
-    margin: 0 auto;
-}
-
-.section_1 {
     width: 100%;
+    margin: 0 auto;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-image: url(../img/background.jpg);
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+/******************** section_1 ********************/
+
+.section_1 {
     background-size: cover;
-    background-position: center;
+    background: url(../img/background.jpg) center;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(31, 30, 52, 1));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(31, 30, 52, 1));
 }
 
 .intro {
@@ -522,7 +540,11 @@ a:hover {
             align-items: center;
 }
 
-.section_1 h1 {
+.react-logo {
+    position: relative;
+}
+
+.intro h1 {
     position: relative;
     text-align: center;
 }
@@ -541,41 +563,16 @@ a:hover {
     font-size: 18px;
 }
 
-.overlay {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(31, 30, 52, 1));
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(31, 30, 52, 1));
-}
+/******************** section_2, 3 ********************/
 
-.section_2, .section_3, .section_4 {
-    width: 100%;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+.section_2, .section_3 {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 }
 
 .iphone-demo {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
@@ -583,9 +580,14 @@ a:hover {
     -webkit-flex-basis: 0;
         -ms-flex-preferred-size: 0;
             flex-basis: 0;
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
+
+    -webkit-box-pack: center;
+
+    -webkit-justify-content: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -606,15 +608,17 @@ a:hover {
     -webkit-flex-basis: 0;
         -ms-flex-preferred-size: 0;
             flex-basis: 0;
+
     -webkit-box-pack: center;
+
     -webkit-justify-content: center;
+
         -ms-flex-pack: center;
+
             justify-content: center;
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
 }
 
+/******************** section_4 ********************/
 .section_4 {
     overflow: hidden;
 }
@@ -628,6 +632,7 @@ a:hover {
             transform: translate(100px, 120px) rotate(-45deg);
 }
 
+/******************** slider ********************/
 #slider-control {
     position: fixed;
     right: 20px;
@@ -653,6 +658,3 @@ a:hover {
     background-color: #fff;
 }
 
-.react-logo {
-    position: relative;
-}
