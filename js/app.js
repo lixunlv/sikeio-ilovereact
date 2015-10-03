@@ -43,7 +43,7 @@ function scrollToElement(element) {
 }
 
 function addSmoothScrolling() {
-    var links = document.querySelectorAll("#slider-control a");
+    var links = document.querySelectorAll("#slider-control a, .links a");
 
     for (var i = 0; i < links.length; i++) {
         var link = links[i];
